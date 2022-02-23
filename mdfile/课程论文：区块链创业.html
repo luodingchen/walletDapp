@@ -1,0 +1,554 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>课程论文：区块链创业</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.25em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="区块链创业" class="md-header-anchor"></a><span>区块链创业</span></h1><p><span> </span></p><h2><a name="基本概念" class="md-header-anchor"></a><span>基本概念</span></h2><p><span>随着各种工具更加便利，人与人之间的交际往来颇为频繁，但随之带来的信任问题却始终难以解决，“中介”、“中心机构”一直为我们构筑着信任的桥梁，却也带来额外的成本。区块链技术的去中心化特性，使得信任不再依托于中介，而依托于精密的数学。</span></p><p><span>在传统模式中，我们无法实现完全不可逆的交易，因为金融机构总是不可避免地会出面协调争端。而金融中介的存在，也会增加交易的成本，并且限制了实际可行的最小交易规模，也限制了日常的小额支付交易。</span></p><p><span>并且潜在的损失还在于，很多商品和服务本身是无法退货的，如果缺乏不可逆的支付手段，互联网的贸易就大大受限。因为有潜在的退款的可能，就需要交易双方拥有信任。而商家也必须提防自己的客户，因此会向客户索取完全不必要的个人信息。而在使用物理现金的情况下，这些销售费用和支付问题上的不确定性却是可以避免的，因为此时没有第三方信用中介的存在。</span></p><p><span>所以，我们非常需要这样一种电子支付系统，它基于密码学原理而不基于信用，使得任何达成一致的双方，能够直接进行支付，从而不需要第三方中介的参与。杜绝回滚支付交易的可能，这就可以保护特定的卖家免于欺诈；而对于买家来说，第三方中介费用以及繁琐事务的减少会使其交易更加轻松愉快。</span></p><p><span>由此，区块链技术得以产生并投入应用，比特币、以太坊等区块链技术早已在世界金融体系中掀起了巨大波澜。</span></p><h2><a name="基本原理" class="md-header-anchor"></a><span>基本原理</span></h2><h3><a name="区块链的密码学基础" class="md-header-anchor"></a><span>区块链的密码学基础</span></h3><p><span>（1）  哈希函数</span></p><p><span>抗碰撞性：若x≠y,H(x)=H(y)即表示发生了哈希碰撞。</span></p><p><span>哈希碰撞是不可避免的，因为输入空间总是远大于输出空间。而抗碰撞性是指，没有高效的方法去人为制造哈希碰撞。当输出空间足够大时，对于确定的一个X，很难找到一个Y（X!=Y）使得H(X)=H(Y)，只能遍历整个输入空间计算哈希值。要想加密一串信息时，只需求出其哈希值，若哈希值不变，则原信息就不变。上传文件的时候计算哈希值，下载文件后再计算哈希值，比对即可知道是否被篡改。</span>
+<span>   非可逆性：哈希函数的计算过程是单向的，不可逆的。从H(x)无法推导出x，这表示哈希值没有泄露有关输入的任何信息。</span></p><p><span>该性质前提是输入空间足够大，分布比较均匀。非可逆性与抗碰撞性结合在一起，可用来实现“密封信件”功能。把预测结果作为输入x，算出一个哈希值，将哈希值公布，非可逆性让人们知道哈希值而不知道预测值，最后再将x公布，因为有抗碰撞的性质，预测结果是不可篡改的。</span></p><p><span>非前瞻性：指哈希值的结果事先是不可预测的。若要得到一个前k位为0的256位哈希值，对于任意一个输入值都无法预测其哈希运算的结果是否在这个范围内，也就是说，不可避免的要将输入值一个个计算哈希值，才可能找到其哈希运算结果为特征哈希值的数。</span></p><p><span>（2）  非对称加密</span></p><p><span>每个用户在本地生成一对公私钥，公钥公开，私钥保密。A用户使用B用户的公钥加密信息，B用户使用自己的私钥解密信息；A用户发布交易时使用自己的私钥签名交易，其他用户则使用A用户的公钥验证该交易是否确为A签名的。</span></p><h3><a name="区块链共识机制" class="md-header-anchor"></a><span>区块链共识机制</span></h3><p><span>（1）  工作量证明</span></p><p><span>工作量证明机制依据计算力来确定记账权。每个节点都可以自行组装一个候选区块，而后在本地尝试计算各种随机值的哈希结果，使得该区块头的哈希值小于给定的阈值，即[H(block header)&lt;=target]，阈值的大小与全网总算力有关，总算力越大，阈值越小，单个矿工挖出区块的时间越长，全网总出块时间基本不变。当某个节点找到符合要求的随机值，便获得了记账权，从而可以将区块发布到系统中。其他节点受到区块后，验证区块合法性，如果系统中绝大多数节点验证通过，则接收该区块为最新的区块并加入到区块链中。</span></p><p><span>（2）  权益证明</span></p><p><span>权益证明中引入了“币龄”的概念，每个币每天产生1币龄。挖矿时，对于每个矿工来说，要计算出哈希值的阈值大小是不同的，即挖矿难度与币龄成反比。当某个矿工成功挖出区块后，其币龄将被清空，记账后系统会给予其相应“利息”，获得利息为：币龄*利率/365。在权益证明机制下，持有币越多，越容易获得记账权，接近于赢家通吃的感觉，但持有的币越多，越接近于一个诚实的节点，因为破坏整个网络带来的损失也越大。</span></p><p><span>（3）  委托权益证明</span></p><p><span>全网投票选出101个节点代行记账权限，这些代表节点的权限完全一致。代表节点轮流记账，可以选择创造区块或不创造区块。但他们无法改变交易的详情，恶意或者迟到的代表节点的行为也会被公之于众，网络可以投票将不好的节点驱逐出去。被驱逐出去的代表节点将会失去他们记账权限，以及对应的收入。</span></p><p><span>权益委托证明是一种弱中心化的共识机制，保留了一些中心化系统的关键优势，如交易速度等(每个块的时间为10秒，一笔交易在得到6-10个确认后大概1分钟，一个完整的101个块的周期大概仅仅需要16分钟)，每个持币者都有能力决定哪些节点可以被信任，并且事实上，代表节点会主动降低自己的收入来赢得更多投票，剩下的收入会作为股息，支付给所有支持该节点的持币者。</span></p><h2><a name="主要商业模式" class="md-header-anchor"></a><span>主要商业模式</span></h2><p><span>   区块链技术发展还处于早期，有相当大的商业前景与价值，不过本文仅列举一些已发展成熟的商业模式，这些模式多应用在金融领域并且已具备相当的规模。</span></p><p><span>（1）  代币金融</span></p><p><span>代币就是在以太坊之类区块链上构建的数字资产。代币被广泛运用在融资上，也常用来作为某种资产的象征，以下列举几个代币的形式。</span></p><p><span>\1. Gold Token（黄金代币）: 银行可以有 1 千克的黄金储备，然后发行 1 千的 token。买 100 个 token 就等于买 100 克的黄金。 </span></p><p><span>2.公司股票: 公司股票可以用以太坊上的代币来表示。通过支付以太，人们可以购买公司股票，从而获得与股票数相等的投票权以及分红率。这一模式常常用于公开上市交易的公司。例如一个叫做Block的上市公司，有3个职位空闲，分别是总裁，副总裁和部长。这几个职位有3个竞争人选。公司想要进行选举，股东决定哪个候选人得到哪个职位。拥有最高投票的候选人将会成为总裁，然后是副总裁，最后是部长。那就可以构建一个项目，发行公司股票，允许任何人购买股票。基于所拥有的股票数，他们可以为候选人投票。合约发布者输入候选人名单、股票总数以及每票的以太币价格。每个用户可以使用以太币来购买股票，给任意候选人投任意不大于自己购买的股票余额的票数。</span></p><p><img src="./mdfile/pictures/business/clip_image003.jpg.png" referrerpolicy="no-referrer" alt="clip_image003.jpg"></p><center>股权投票合约架构</center><p><span>3.游戏货币: 在一些基于区块链的游戏中，游戏者可以用以太币购买代币，即游戏币，并在游戏中体验付费服务。 </span></p><p><span>4.购物积分: 当你在一个商店购物，商店可以发行代币作为购物积分，它可以在将来作为现金回收，或是在第三方市场售卖。</span></p><p><span>（2）  秘密竞拍</span></p><p><span>秘密竞拍的好处是在投标结束前不会有时间压力。在一个透明的计算平台上进行秘密竞拍听起来像是自相矛盾，但密码学可以实现它。</span></p><p><span>在投标期间 ，投标人实际上并没有发送她的出价，而只是发送一个哈希版本的出价。由于目前几乎不可能找到两个（足够长的）值，其哈希值是相等的，因此投标人可通过该方式提交报价。在投标结束后，投标人必须公开他们的出价：他们不加密的发送他们的出价，合约检查出价的哈希值是否与投标期间提供的相同。</span></p><p><span>另一个挑战是如何使拍卖同时做到 绑定和秘密 : 唯一能阻止投标者在她赢得拍卖后不付款的方式是，让她将钱连同出价一起发出。但由于资金转移在以太坊中不能被隐藏，因此任何人都可以看到转移的资金。</span></p><p><span>合约通过接受任何大于最高出价的值来解决这个问题。当然，因为这只能在披露阶段进行检查，有些出价可能是无效的，并且，这是故意的(与高出价一起，它甚至提供了一个明确的标志来标识无效的出价)：投标人可以通过设置几个或高或低的无效出价来迷惑竞争对手。</span></p><p><span>（3）  微支付通道</span></p><p><span>在以太坊上实现一个支付通道。通过使用密码签名技术可以在相同的参与者之间安全的、重复的、免手续费的转移以太币。</span></p><p><span>想象一下 Alice想发送一些以太币给 Bob, 即 Alice 发送者，而 Bob 是接收者。Alice仅仅需要发送一条在链下密码学签名后的信息给Bob（比如通过消息），编写检查也是类似的。Alice和Bob 用签名去授权交易，这可以通过以太坊智能合约来实现。Alice将创建一个简单的智能合约来发送他的以太币，发送的函数不再是她在发起交易的时候执行，她将让 Bob 来执行并支付交易费。</span></p><p><span>合约工作有以下几步：Alice部署合约, 并附上足够的以太来负担支付通道的付款；Alice 通过自己的私钥签名来授权一个支付；Alice 发送签名信息给Bob，这个信息是不需要保密的，用什么发送也无关紧要；Bob通过把签名信息提交给合约来索取这笔支付，合约将验证信息的真实性并发送金额。Alice 不需要和以太坊网络进行交互就可以完成签名，这个过程是完全离线的。</span></p><p><span>每条签名都包含以下信息：智能合约的地址，用于防止交叉合约重放攻击；到目前为止所发送的以太总量。在一系列转账结束时，付款通道仅需关闭一次。因此，只有一条消息被兑换。这就是为什么每条消息都指定了以太的累计总量，而不是每次的微支付金额。收款人自然而然的会选择兑换最新消息，因为这是以太总数最高的消息。</span></p><h2><a name="行业简介" class="md-header-anchor"></a><span>行业简介</span></h2><p><span>区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。国家强调把区块链作为核心技术自主创新的重要突破口，加快推动区块链技术和产业创新发展。</span></p><p><span>区块链类型主要分为公有区块链、联合（行业）区块链以及私有区块链，公有区块链是指世界上任何个体或者团体都可以发送交易，且交易能够获得该区块链的有效确认，任何人都可以参与其共识过程。</span></p><p><span>2020年是区块链产业发展的关键年，产业区块链成为行业发展的主流和共识。近年来，我国区块链相关注册企业数量持续攀升，截至2020年底，全国区块链相关注册企业数量24587家，较上年增加12864家，同比增长108.8%。</span></p><p><img src="./mdfile/pictures/business/clip_image005.jpg" referrerpolicy="no-referrer" alt="clip_image005"></p><center>2014-2020年区块链相关注册企业数量及增长率</center><p><span>截止到2020年年底，广东省区块链企业数量最多，达到28923家，远超其他地区；其次是浙江区块链企业数量4480家；江苏区块链企业数量4053家；其余山东、海南、重庆、陕西、福建、北京、湖南区块链企业数量均在1000家以上。</span></p><p><img src="./mdfile/pictures/business/clip_image007.jpg" referrerpolicy="no-referrer" alt="clip_image007"></p><center>2020年区块链企业注册地分布</center><p><span>从企业注册资本来看，2020年区块链企业注册资本在100-1000万元范围的企业数量占比48.32%；其次是注册资本在10-100万元之间企业占比29.76%；注册资本在1000-10000万的企业数量占比14.93%；注册资金在1亿元以上的企业占比为2. 07%。</span></p><p><img src="./mdfile/pictures/business/clip_image008.jpg.png" referrerpolicy="no-referrer" alt="clip_image008.jpg"></p><center>2020年区块链企业注册资本规模分布</center><p><span>按企业工商登记的细分范围，2020年区块链企业所属行业以软件和信息技术服务业为主，企业数量达23789家，占比32%；研究和试验发展业企业数量为12411家，占比16%；商务服务业企业数量11447家，占比15%。</span></p><p><img src="./mdfile/pictures/business/clip_image010.jpg" referrerpolicy="no-referrer" alt="clip_image010"></p><center>2020年区块链企业所属行业分布</center><p><span>按地域分，已开展业务的区块链企业主要分布在广东、北京、上海、浙江等经济和技术发达地区。其中，广东企业数量最多，为489家；其次是北京企业数量461家；上海企业数量223家；浙江企业数量187家；江苏企业数量103家。</span></p><p><img src="./mdfile/pictures/business/clip_image012.jpg" referrerpolicy="no-referrer" alt="clip_image012"></p><center>2020年开展业务的区块链企业分布</center><p><span>按基础底层平台分，多数项目为超级账本和以太坊，平台数量分别是323家、163家；其次FISCO BCOS平台数量45家；EOS平台数量42家；比特币平台数量23家；其余趣链、壹账链、蚂蚁区块链、布比区块链、荣泽区块链、聚龙链均在10家以上。</span></p><p><img src="./mdfile/pictures/business/clip_image014.png" referrerpolicy="no-referrer" alt="clip_image014"></p><center>2020年区块链基础底层平台应用情况</center><p><span>目前部分企业在区块链技术应用上已经形成了一定的技术储备。2020年有1100余家企业在国内拥区块链相关专利(包括受理、公开、授权)，其中拥有超过100项区块链专利的企业33家；拥有50-100个区块链专利的企业26家；拥有10-50个区块链专利的企业195家，拥有2-9个区块链专利的企业544家；拥有1个区块链专利的企业330家。</span></p><p><img src="./mdfile/pictures/business/clip_image016.jpg" referrerpolicy="no-referrer" alt="clip_image016"></p><center>2020年企业区块链相关专利数量分布</center><p><span> 2020 年区块链领域发生的安全事件主要包括DeFi安全事件103起，占比18%；诈骗/钓鱼事件204起，占比37%；勒索软件事件143起，占比26%；交易平台安全事件31起，占比6%；数字钱包安全事件41起，占比7%；公链安全事件17起，占比3%。</span></p><p><img src="./mdfile/pictures/business/clip_image018.jpg" referrerpolicy="no-referrer" alt="clip_image018"></p><center>2020年区块链安全事件统计</center><h2><a name="国内外重大创业案例及分析" class="md-header-anchor"></a><span>国内外重大创业案例及分析</span></h2><h3><a name="项目背景" class="md-header-anchor"></a><span>项目背景</span></h3><p><span>The DAO项目是区块链物联网公司Slock.it发起的一个众筹项目。在当时，Slog.it需要融资，而区块链公司是很难在传统行业里面去做融资的，因为区块链的生意跟现有的金融体系和法律体系结合，会产生很多问题。Slog.it希望在区块链领域有非常专业的机构来投资自己，去筹集做开源项目所需要的资金。在融资的过程中，他们发现这是一个很强的需求。区块链领域里的每家公司都会有这样的融资需求。于是这帮天才程序员就有了一个大胆的想法：“既然现在没有专门针对区块链领域的投资机构可以投资我们，那我们自己为什么不自己造一个出来呢？”</span></p><p><span>于是他们集结了当时最优秀的一批区块链技术人员，当时最大的区块链项目——The DAO应运而生，它具有以下特点：</span></p><p><span>1、The DAO本质上是个VC（风险投资基金），通过以太坊筹集到的资金会锁定在智能合约中，没有哪个人能够单独动用这笔钱。更重要的是，该组织只存在于虚拟的数字世界中，不受任何政府监管约束、无国界，资金是加密数字货币的以太币(Ether)形式，其行为由智能合约中的代码来主导（因此称作“自治”）。</span></p><p><span>2、每个参与众筹的人按照出资数额，获得相应的DAO代币(token)，具有审查项目和投票表决的权利。从这点说，DAO代币有点像股票，众筹参与者是股东。代币还有另一个作用，就是持有人有权提出投资项目的议案，供The DAO审核。</span></p><p><span>3、投资议案由全体代币持有人投票表决，每个代币一票。如果议案得到需要的票数支持，相应的款项会划给该投资项目。在传统基金中，投资策略是由经验丰富的基金经理等专业人士制定的。在The DAO中，决策来自于“众智”（the wisdom of the crowd）。众智的概念最早可以溯源到亚里士多德关于政治的论述，其原理是：综合许多人的智慧，可以做出比某个专家更好的结论。现实生活中例子很多，如陪审团、维基百科的编制、《百万富翁》游戏中的询问观众等等。当然，这里抛开了纯粹的“众智”，而加入了出资额的权重。</span></p><p><span>4、投资项目的收益会按照一定规则回馈众筹参与人（股东）。当然，并不是每个项目都有收益，或者能够盈利，而且一般来说会是风险较高的项目，可以靠分散投资来降低风险。</span></p><p><span>The DAO颠覆性地创造了一种新型的自治组织，把组织的运作交由去中心化的区块链网络来执行，不受任何外部的政府、个人、机构和国界的影响。The DAO作为投资基金，还将孵化催生这个领域更多的创新项目，带来更多的惊喜。业界视其为下一轮信息技术革命。当然，The DAO游离于各国法律法规的监管之外，也引起了不少人的批评和担忧，对DAO的运作模式也有很多反对的声音，毕竟上亿美元都投入到了一个无法律保障的虚拟实体里面，还是会引起很多人的不安。</span></p><p><span>然后，就当所有人对这一项目寄予厚望、翘首以盼时，噩耗传来了：The DAO遭遇黑客袭击，合约中的以太币不可避免的被黑客逐渐卷走。</span></p><h3><a name="事件经过" class="md-header-anchor"></a><span>事件经过</span></h3><p><span>由于智能合约上存在重大缺陷，当时区块链界最大的项目，The DAO被攻击， 这次重大事故的问题其实很简单，仅仅是两行代码出现了问题：</span></p><p><img src="./mdfile/pictures/business/clip_image020.jpg.png" referrerpolicy="no-referrer" alt="clip_image020.jpg"></p><center>The DAO 代码漏洞</center><p><span>   其实只要将这两行代码的顺序上下颠倒便不会出错，但遗憾的是，由于该代码的漏洞，导致黑客利用合约无限制提走The DAO合约内的以太币。</span></p><p><span>THE DAO当时募集了1150万个以太坊，而当时以太坊ICO的发行量是7000万，之后陆续挖矿挖出来一些。按照情况，全世界15%的可流动的以太坊全部都投到了THE DAO这个项目中，锁在了这一个智能合约里面。</span></p><p><span>一个智能合约掌握了全网络15%的以太坊，这是一件极其可怕的事情。它也成了最容易吸引黑客去攻击的靶子。黑客整个攻击手法非常犀利，也非常巧妙，黑客是一个顶尖高手，这点毋庸置疑。</span></p><p><span>在攻击发起的一时间，以太坊的单价从一百二三十块钱人民币，跌到了四五十块。Vitalik Buterin在一个关键的时间点，发了很短的一篇文章，说事情可能没有想象的那么糟。第一点是THE DAO被偷的钱只占总额的30%，黑客就停手了；第二是，The Dao投的钱转入到了一个子合约中，这个子合约根据规定有一个28天的锁定期，在锁定期之内，黑客还拿不到这个钱。也就是说，还有28天可以对本次攻击做出反应，而应对方法只有一种，那就是回滚所有与The DAO有关的交易，并重新发布一个新的以太坊版本，实现以太坊硬分叉，而这一措施，无疑是与区块链的去中心化背道而驰的，一时间，以太坊社区爆发了激烈的讨论：是否以太币被黑客偷走，我们就该拿回来？但拿回这笔钱的方式，是否违背了区块链的核心理念，“Code is law”的理念？于是，一轮投票开始了，最终同意分叉派以20：1的绝对优势，给以太坊做出了最终决定。</span></p><h3><a name="事件分析" class="md-header-anchor"></a><span>事件分析</span></h3><p><span>经此一事，黑客似乎失败了，但有人胜利吗？“Code is law” 的原则被打破了，社区的意愿改掉了“Code is law”的结果。这是区块链历史上第一次由人的意志去改变了区块链本身的意志。这代表着区块链不可篡改，不可伪造的神话被打破，而且是在以太坊上。The DAO本预示着区块链的崭新未来，却不曾想带来了寒冬。</span></p><p><span>但这次事件并非没有积极性，在The DAO事件前，人们对于智能合约的安全性并不关注，以太坊代码规范也不够严谨，The DAO的破灭虽然阻碍了区块链迈向商业的蜕变，但也使区块链技术的安全性更加得到重视，按捺住浮躁的气息，稳步发展至今。</span></p><h2><a name="本领域创业难点" class="md-header-anchor"></a><span>本领域创业难点</span></h2><p><span>当前，基于区块链技术的各种平台和相关应用大量涌现，但区块链作为一门新技术才刚起步，其本身还存在诸多安全隐患，在金融风险、网络安全、舆情传播等方面亟待监管。在这样的情形下，区块链创业风险不可忽视，以下总结了主要的几个难点。</span></p><h3><a name="币圈生态乱象" class="md-header-anchor"></a><span>币圈生态乱象</span></h3><p><span>基于区块链的加密货币往往会成为众多诈骗的新目标，严重危害了区块链平台的金融安全，其中比较常见的非法行为包括钓鱼诈骗、勒索病毒和黑客攻击等。所谓“钓鱼诈骗”，指的是攻击者伪装成可以信任的人或机构，通过电子邮件、通讯软件、社交媒体等方式，获取收件人的用户名、密码、私钥等私密信息。2018年3月，币安交易平台遭遇钓鱼诈骗，多个账户遭到入侵，不得不停止了所有币种的提现，直接导致了全球加密货币市场的一轮大跌。勒索病毒是近年来发现的一种能够通过有漏洞的电脑、钓鱼邮件附件等途径自传播感染大量计算机并加密锁定该计算机内所有文件以勒索比特币的一种影响恶劣的病毒。2015年5月，一种名为“CTB-Locker”的比特币勒索病毒在国内爆发式传播，该病毒通过远程加密用户电脑文件，从而向用户勒索赎金，用户文件在支付赎金后才能打开。</span></p><p><span>为防止欺诈和伪造交易，区块链整个支付网络中所发生的每一笔交易都会被记录，但由于区块链匿名的特性，交易只是按照转账地址记录下来，交易者的真实身份难以确认，因此加密货币可用于匿名且非法的应用当中，大量不法人员利用加密货币进行洗钱、赌博、黑市交易、贩卖违禁品、诈骗、漏洞攻击等违法行为，严重破坏币圈生态。</span></p><h3><a name="合约安全漏洞" class="md-header-anchor"></a><span>合约安全漏洞</span></h3><p><span>智能合约是一种旨在以信息化方式传播、验证或执行合同的计算机协议。合约允许在没有第三方的情况下进行可信交易，这些交易可追踪且不可逆转。智能合约的运行不受任何第三方的影响，是只根据代码执行的全自动过程，因此当代码运行逻辑本身就会为用户带来损失时，智能合约就成为一个非法合约，常见的合约漏洞有溢出漏洞、重入漏洞、交易顺序依赖漏洞、底层函数漏洞、伪随机漏洞、存储未初始化漏洞等。除此之外，对区块链发起的DOS攻击也会使得该区块链网络瘫痪，致使合约无法即时响应而完成正常功能。前文中提到的The DAO事件就是合约漏洞影响最大的一个案例，两行代码的顺序错误，导致项目方血本无归。</span></p><h3><a name="加密货币交易市场" class="md-header-anchor"></a><span>加密货币交易市场</span></h3><p><span>交易所是加密货币市场的重要组成部分。除了对区块链本身进行攻击，基于区块链的加密货币交易所也成为非法攻击的目标之一。比如比特币最大的交易所Bitfinex在2017年曾遭受过严重的分布式拒绝服务攻击（DDoS），导致其比特币交易接口瘫痪。交易所又可以分为中心化交易所和去中心化交易所，其中，中心化交易所通常被一个组织所控制，去中心化交易所通常由智能合约实现控制。据分析，大型中心化交易所在提供大量交易的同时，也存在着对数据造假、市场操纵、价格操作等行为。如比特币交易所Mt.Gox就曾通过采用某些特殊交易方式，对比特币的价格进行了操纵。另外，交易所一般也开展挖矿业务，汇集大量个体矿工，导致算力集中，历史上有交易所的算力多次逼近百分之五十，使得分叉攻击变得更为容易，给区块链带来了严重的安全隐患。</span></p><h2><a name="总结" class="md-header-anchor"></a><span>总结</span></h2><p><span>   区块链创业机遇与风险并存，现阶段区块链技术与金融业务息息相关，对安全性的把握不容忽视，而这一点则对开发人员的技术能力提出了高标准的要求。但另一方面，区块链技术发展尚处于早期，面临专业人才严重缺失的情况，让区块链创业企业陷入两难的尴尬境地。万幸的是，政府早在2019年就对区块链发展加以重视并进行引导，习主席强调：“区块链技术的集成应用在新的技术革新和产业变革中起着重要作用。我们要把区块链作为核心技术自主创新的重要突破口，明确主攻方向，加大投入力度，着力攻克一批关键核心技术，加快推动区块链技术和产业创新发展。”相信在党和政府的领导下，区块链创业会迎来新的光辉！</span></p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

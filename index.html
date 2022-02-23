@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<head>
+    <title>以太坊钱包</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script>
+  function showMarkdown()
+{
+    // 获取表单变量
+    var f=form;
+    // 创建XMLHttpRequest对象
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    
+    // 得到服务器响应后，对得到的Markdown文档进行解析
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            // 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
+            document.getElementById("content").innerHTML=(xmlhttp.responseText);
+        }
+    }
+    
+    
+    // 向服务器发送请求，获取你需要的Markdown文档
+    xmlhttp.open("GET",f.q.value,true);
+    xmlhttp.send();
+    }
+
+    </script>
+</head>
+
+<body class="container">
+        <div class="container" style="margin-top:30px">
+        <form name="form" action="" method="post">
+            <select name="q">
+                <option class="active" value="">选择一个笔记:</option>
+		        <option value="mdfile/合约：钱包.html">合约：钱包</option>
+                <option value="mdfile/合约：云笔记.html">合约：云笔记</option>
+                <option value="mdfile/合约：微支付.html">合约：微支付</option>
+                <option value="mdfile/合约：秘密竞拍.html">合约：秘密竞拍</option>
+                <option value="mdfile/合约：线上交易.html">合约：线上交易</option>
+                <option value="mdfile/合约：云笔记.html">合约：云笔记</option>
+                <option value="mdfile/合约：线性回归模型验证.html">合约：线性回归模型验证</option>
+                <option value="mdfile/代码优化前.html">代码优化前</option>
+                <option value="mdfile/代码优化后.html">代码优化后</option>
+                <option value="mdfile/项目：钱包开发流程.html">项目：钱包开发流程</option>
+		        <option value="mdfile/项目：云笔记开发流程.html">项目：云笔记开发流程</option>
+		        <option value="mdfile/基本：分布式原理与概念.html">基本：分布式原理与概念</option>
+		        <option value="mdfile/基本：区块链原理与概念.html">基本：区块链原理与概念</option>
+		        <option value="mdfile/进阶：合约漏洞解析.html">进阶：合约漏洞解析</option>
+		        <option value="mdfile/提案翻译：BIP-32分层确定性推导.html">提案翻译：BIP-32分层确定性推导</option>
+		        <option value="mdfile/提案翻译：BIP-39助记词.html">提案翻译：BIP-39助记词</option>
+		        <option value="mdfile/课程论文：区块链创业.html">课程论文：区块链创业</option>
+		        <option value="mdfile/课程论文：区块链与机器学习.html">课程论文：区块链与机器学习</option>
+            </select>
+            <input type="button" value="显示" onclick="showMarkdown()">
+            <a href="./index.html"><u>返回首页</u></a>
+	</form>
+    <div id="content"></div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered" style="font-size:20px;">
+            <tbody>
+                <tr>
+                    <td id="console"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<input type="file" id="files" onchange="importfile();"/>
+    <input type="password" id="keystore-pwd" placeholder="keystore-pwd" />
+    <a href="#" onclick="readKeystore()" class="btn btn-primary">keystore登录</a>
+	<a id="dl" href=""  download="" class="btn btn-primary">keystore下载</a>
+
+	<input type="text" style="width:330px" id="keyToAc" placeholder="private-key" />
+	<input type="password" id="pwdToAc" placeholder="password" required οnblur="checkPwd(this.value)" />
+	<a href="#" onclick="keyUpAccount()" class="btn btn-primary">私钥注册</a>
+    <a href="#" onclick="keyInAccount()" class="btn btn-primary">私钥登录</a>
+	
+	
+	<br><br>
+	<input type="text" style="width:650px" id="wordsToAc" placeholder="words" />
+	<input type="password"  id="pwdToMn" placeholder="password" required οnblur="checkPwd(this.value)" />
+    <a href="#" onclick="wordsUpAccount()" class="btn btn-primary">助记词注册</a>
+    <a href="#" onclick="wordsInAccount()" class="btn btn-primary">助记词登录</a>
+	<a href="#" onclick="getWords()" class="btn btn-primary">获取助记词</a>
+	<br><br>	
+    <input type="password" id="password-signup" placeholder="password" required οnblur="checkPwd(this.value)"/>
+    <a href="#" onclick="SignUp()" class="btn btn-primary">注册</a>
+	
+    <input type="text" style="width:409px" id="address-signin" placeholder="Address" />
+    <input type="password" name="password" id="password-signin" placeholder="password" required οnblur="checkPwd(this.value)" />
+    <a href="#" onclick="SignIn()" class="btn btn-primary">登录</a>
+	
+    <a href="#" onclick="SignOut()" class="btn btn-primary">注销</a>&emsp;&emsp;&emsp;
+	
+	<a href="#" onclick="GetSomeEther()" class="btn btn-primary">获得以太币</a>
+	<br>
+	
+	
+    <div class="clear"></div>
+	<a class="news-letter" href="#">
+		<label class="checkbox">
+			&emsp;&emsp;<input type="checkbox" onclick="checkit(this.checked)"><i></i>显示密码
+		</label>
+	</a><br>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>代币信息</th>
+                    <th>值</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>合约中的代币总额</td>
+                    <td id="TokensInfo-1"></td>
+                </tr>
+                <tr>
+                    <td>合约中的代币余额</td>
+                    <td id="TokensInfo-2"></td>
+                </tr>
+                <tr>
+                    <td>合约中的代币单价</td>
+                    <td id="TokensInfo-3"></td>
+                </tr>
+                <tr>
+                    <td>合约的以太币余额</td>
+                    <td id="TokensInfo-4"></td>
+                </tr>
+                <tr>
+                    <td>当前账户代币余额</td>
+                    <td id="TokensInfo-5"></td>
+                </tr>
+                <tr>
+                    <td>当前账户以太币余额</td>
+                    <td id="TokensInfo-6"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <input type="text" id="tokensToBuy" placeholder="purchase how many tokens" />
+    <a href="#" onclick="buyTokens()" class="btn btn-primary">购买代币</a>&emsp;&emsp;&emsp;
+    <input type="text" id="TokensAddrTo" placeholder="give tokens to who?" />
+    <input type="text" id="TokensNumberTo" placeholder="give how many tokens?" />
+    <a href="#" onclick="GiveTokens()" class="btn btn-primary">转移代币</a><br><br>
+    <input type="text" id="transaction-id" placeholder="Copy the transaction-id here" />
+    <a href="#" onclick="checkTx()" class="btn btn-primary">查询交易</a>&emsp;&emsp;&emsp;
+    <input type="text" id="EtherAddrTo" placeholder="give ether to who?" />
+    <input type="text" id="EtherNumberTo" placeholder="give how many ether?" />
+    <a href="#" onclick="GiveEther()" class="btn btn-primary">发送以太币（Wei）</a><br><br>
+    <input type="text" id="block-id" placeholder="Copy the block-id here" />
+    <a href="#" onclick="checkBk()" class="btn btn-primary">查询区块</a>&emsp;&emsp;&emsp;
+    <input type="text" id="extractTo" placeholder="extract ether to where?" />
+    <a href="#" onclick="GetContractEther()" class="btn btn-primary">提取合约以太币余额</a>
+    <br><br>
+    DeveloperAdress:&emsp;'0x7BB386E6C2ACFbC9F1106aE2B82308DfeC488fe6'&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    ContractAdress:&emsp;'0xEA09e0337157818502a2Ef409A8EF5F471b7f862'<br><br>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/web3/1.3.4/web3.min.js"></script>
+<script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+        type="application/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="./index_wallet.js"></script>
+
+</html>
